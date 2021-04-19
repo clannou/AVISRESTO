@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>AVISRESTO</title>
+
+<!-- FontAwesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<!-- Animate -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
+<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- Feuille de style CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Favicon -->
+	<link rel="icon" href="logo_AvisResto.png"/>
+</head>
+
+
+<body id="page-top">
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+	<div class="container">
+		<a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="logo" src="logo_AvisResto.png" alt="" />AVISRESTO</a>
+		<button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			Menu
+			<i class="fas fa-bars"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">A Propos</a></li>
+				<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#restos">Les Restos</a></li>
+				<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projet">Le Projet</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center">
+	<div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+		<img class="masthead-avatar mb-5" src="avatar_chef.png" alt="male avatar chef"/>
+		<!-- Masthead Heading-->
+		<h1 class="masthead-heading text-uppercase mb-0">AVISRESTO</h1>
+		<!-- Icon Divider-->
+		<div class="divider-custom divider-light">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+			<div class="divider-custom-line"></div>
+		</div>
+	</div>
+</header>
+
+<!-- About Section-->
+<section class="page-section bg-primary text-white mb-0" id="about">
+	<div class="container">
+		<!-- About Section Heading-->
+		<h2 class="page-section-heading text-center text-uppercase text-white">A Propos</h2>
+		<!-- Icon Divider-->
+		<div class="divider-custom divider-light">
+			<div class="divider-custom-line"></div>
+			<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+			<div class="divider-custom-line"></div>
+		</div>
+		<!-- About Section Content-->
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				
+				<h3 class="bienvenue">Bienvenue sur AvisResto !</h3>
+				<h4>Le site qui vous aide à trouver les meilleurs restos autour de vous.</h4>
+				<h5 class="rules">Comment ça marche ?</h5>
+				<p>L'application vous géolocatise et vous montre les restaurants avec les meilleurs notes autour de vous</p>
+				<i class="fas fa-laugh-wink fa-2x animate__animated animate__swing animate__infinite"></i></p>
+				<h5>LET'S GO !</h5></div>
+		</div>
+	</div>
+</section>
+
+<section class="page-section bg-primary text-white mb-0" id="restos">
+
+    <div id="map" class="container">
+    </div>
+
+    <div id="listing"class="container">
+        <h3 class="listing-title">Listing des restos</h3>
+
+        
+    </div>
+
+</section>
+
+
+
+<!-- Footer-->
+<footer class="footer text-center" id="projet">
+	<div class="container">
+		<div class="row">
+			<!-- Footer About Text-->
+			<div class="col-lg-12">
+				<h2 class="text-uppercase mb-4">A propos du projet</h2>
+				<!-- Icon Divider-->
+				<div class="divider-custom divider-light">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<p class="lead mb-0">Ceci est un projet conçu dans le cadre de la formation Développeur d'Applications FrontEnd chez
+					<a href="http://openclassrooms.com" target="blank">OpenClassrooms</a>.
+				</p>
+			</div>
+		</div>
+		<div><p>@ Copyright Christophe Lannou</p></div>
+	</div>
+</footer>
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9hPFyow-eEse7HOUvLgSAv_GhxZ5l1og&callback=initMap&libraries=places,geometry&v=weekly"async></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!-- My JS -->
+<script src="app.js"></script>
+
+</body>
+</html>

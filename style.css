@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "ShareTech-Regular";
+  src: url("ShareTech-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "ShareTech-Regular";
+  margin: 0;
+}
+
+.bg-secondary {
+  background-color: #2c3e50 !important;
+}
+
+.logo {
+  width: 15%;
+}
+
+#mainNav .navbar-nav {
+  margin-top: 1rem;
+  font-size: 2em;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+}
+
+a {
+  color: #1abc9c;
+  text-decoration: none;
+  background-color: transparent;
+  width: auto;
+}
+
+a:hover {
+  color: #117964;
+  text-decoration: underline;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+#generateur1,
+#generateur2 {
+  outline: none;
+}
+
+.btn-outline-light {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+
+.btn:hover {
+  color: #212529 !important;
+}
+
+#about {
+  background-color: #2c3e50 !important;
+  padding-top: 160px;
+  padding-bottom: 100px;
+}
+
+#restos {
+  display: flex;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.bienvenue {
+  font-size: 2em;
+}
+
+.rules {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.fa-hand-point-down {
+  margin: 20px;
+}
+
+footer {
+  background-color: #2c3e50 !important;
+  color: #ffffff !important;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.masthead {
+  padding-top: 300px;
+  padding-bottom: 150px;
+}
+
+.masthead-avatar {
+  width: 25%;
+}
+
+.divider-custom {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: #2c3e50;
+  border-radius: 1rem;
+  border-color: #2c3e50 !important;
+}
+
+.divider-custom .divider-custom-line:first-child {
+  margin-right: 1rem;
+}
+
+.divider-custom .divider-custom-line:last-child {
+  margin-left: 1rem;
+}
+
+.divider-custom .divider-custom-icon {
+  color: #2c3e50 !important;
+  font-size: 2rem;
+}
+
+.divider-custom.divider-light .divider-custom-line {
+  background-color: #fff;
+}
+
+.divider-custom.divider-light .divider-custom-icon {
+  color: #fff !important;
+}
+
+.bg-primary {
+  background-color: #1abc9c !important;
+}
+
+#listing {
+  border: 3px solid #212529;
+  background-color: white;
+  margin-left: 0;
+  width: 25%;
+}
+
+.listing-title {
+  color: #212529;
+  text-align: center;
+}
+
+#map {
+  width: 1000px;
+  height: 500px;
+}
