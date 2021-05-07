@@ -22,6 +22,8 @@
 <!-- Favicon -->
 	<link rel="icon" href="logo_AvisResto.png"/>
 
+<!-- Jquery UI CSS -->
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
 	
 </head>
 
@@ -92,11 +94,20 @@
     <div id="map" class="container">
     </div>
 
-    <div id="listing"class="container">
-        <h3 class="listing-title">Listing des restos</h3>
 
-        
-    </div>
+
+    	<div id="listing"class="container">
+
+			<div>
+				<div id="stars-filter-title">
+					<label id="stars-filter-label"for="amount">STARS FILTER</label>
+					<input type="text" id="amount" readonly style="border:0; color:#117964;">
+				</div>
+
+				<div id="slider-range"></div>
+			</div>
+    	</div>
+
 
 </section>
 
@@ -128,7 +139,9 @@
 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9hPFyow-eEse7HOUvLgSAv_GhxZ5l1og&callback=initMap&libraries=places,geometry&v=weekly" async></script>
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<!-- jQuery UI-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 <!-- Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <!-- Bootstrap JS -->

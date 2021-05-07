@@ -152,6 +152,7 @@ footer {
 #listing {
   border: 3px solid #212529;
   background-color: white;
+  color: black;
   margin-left: 0;
   width: 25%;
 }
@@ -164,4 +165,39 @@ footer {
 #map {
   width: 1000px;
   height: 500px;
+}
+
+#slider-range {
+  background-color: #117964;
+  width: 50%;
+  margin: auto;
+}
+
+.ui-slider-handle {
+  background-color: #117964;
+}
+
+.stars {
+  background: url("stars.png") no-repeat center;
+}
+
+#stars-filter-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #117964;
+}
+
+#amount {
+  text-align: center;
+}
+
+#stars-filter-label {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
+#content {
+  color: black;
 }

@@ -14,7 +14,11 @@ function initMap() {
     const marker = new google.maps.Marker({
     position: initialLocation,
     map: map,
+    title: 'Vous êtes ici', //le titre au survol de la souris
     });
+
+    // showVisibleMarkers()
+
 
   }, function(positionError) {
     // Position pour défault à Suresnes si geolocalisation refusée
