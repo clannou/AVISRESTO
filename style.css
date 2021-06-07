@@ -198,6 +198,102 @@ footer {
   font-size: 1.5em;
 }
 
-#content {
-  color: black;
+#content,
+#addRestoContent {
+  color: rgb(0, 0, 0);
+  background-color: #9adb9496;
+  box-shadow: 10px 5px 5px #212529;
+  padding: 10px;
+  font-family: "ShareTech-Regular";
+}
+
+#firstHeading {
+  text-align: center;
+  color: #2c3e50;
+  font-weight: bold;
+  border: 5px solid #2c3e50;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+#bodyContent {
+  text-align: center;
+  border: 5px solid #2c3e50;
+  background-color: cornsilk;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+#restoStreetView {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#comment-title {
+  border: 2px solid white;
+  background-color: white;
+  font-style: italic;
+  font-size: 1.2em;
+  color: rgb(0, 0, 0);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#thecomments {
+  padding: 15px;
+  font-size: 14px;
+}
+
+#restoAverage {
+  text-align: center;
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+#add-comment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+  font-size: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+input,
+select,
+textarea {
+  margin: 10px;
+  /* border-radius: 10% / 50%; */
+  /* width: 75%; */
+}
+
+input::placeholder {
+  font-size: 12px;
+  font-style: italic;
+}
+
+#rating-button {
+  font-size: 18px;
+  background-color: #fff;
+}
+
+#rating-button:hover {
+  color: #fff;
+  background-color: #2c3e50;
+  border: 2px solid #fff;
+}
+
+.gm-style .gm-style-iw-c {
+  /* background-color: #9adb9496; */
+  border-radius: 0px;
+  border: 3px solid green;
+  padding: 0%;
+  width: 150%;
 }

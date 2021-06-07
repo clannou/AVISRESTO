@@ -17,8 +17,6 @@ function initMap() {
     title: 'Vous êtes ici', //le titre au survol de la souris
     });
 
-    // showVisibleMarkers()
-
 
   }, function(positionError) {
     // Position pour défault à Suresnes si geolocalisation refusée
@@ -27,3 +25,4 @@ function initMap() {
     }
   );
 }
+

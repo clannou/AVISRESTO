@@ -12,13 +12,13 @@
 
         "ratings": [
           {
-            "stars": 4,
+            "stars": 1,
 
             "comment": "Un excellent restaurant, j'y reviendrai ! Par contre il vaut mieux aimer la viande."
           },
 
           {
-            "stars": 5,
+            "stars": 1,
 
             "comment": "Tout simplement mon restaurant préféré !"
           }
@@ -36,7 +36,7 @@
 
         "ratings": [
           {
-            "stars": 6,
+            "stars": 3,
 
             "comment": "Une minuscule pizzeria délicieuse cachée juste à côté du Sacré choeur !"
           },
@@ -45,6 +45,30 @@
             "stars": 3,
 
             "comment": "J'ai trouvé ça correct, sans plus"
+          }
+        ]
+      },
+
+      {
+        "restaurantName": "il Caravaggio",
+
+        "address": "27 Allée de Saint-Cucufa, 92420 Vaucresson",
+
+        "lat": 48.845427986876985,
+
+        "long": 2.1741991677882595,
+
+        "ratings": [
+          {
+            "stars": 5,
+
+            "comment": "joli (et bon!) resto dans une petite allée calme, plein de charme :)"
+          },
+
+          {
+            "stars": 5,
+
+            "comment": "bon moment et bonne nourriture, la terrasse en été est magnifique"
           }
         ]
       }
