@@ -16,7 +16,6 @@ class resto {
     this.restoDivListing;
 
     this.restoSumUp = document.getElementById("resto-sum-up");
-    this.contentString;
 
     this.markers = [];
     this.markerWhenCreatingResto = null;
@@ -375,16 +374,3 @@ class resto {
     }
   }
 }
-
-//  test(init = flase){
-//    -fonc 1
-//    -fonc 2
-//    -fonc 3
-//    if(init){
-//      function 4
-//      function 5
-//    }
-//  }
-
-//  test()
-//  test(true)

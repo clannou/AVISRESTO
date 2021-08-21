@@ -166,6 +166,12 @@ footer {
   overflow-y: scroll;
 }
 
+#content {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-family: "ShareTech-Regular";
+}
+
 #addRestoContent {
   padding: 10px;
   font-family: "ShareTech-Regular";
@@ -224,12 +230,6 @@ footer {
   font-weight: bold;
   text-decoration: underline;
   font-size: 1.5em;
-}
-
-#content {
-  color: rgb(0, 0, 0);
-  padding: 10px;
-  font-family: "ShareTech-Regular";
 }
 
 #firstHeading {
