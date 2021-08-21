@@ -1,36 +1,26 @@
+window.addEventListener("load", function (event) {
+  let newMap = new map("map");
 
-window.addEventListener("load", function(event) {
+  fetch("resto-listing.json") // remplacer path par url https à la fin du projet
+    .then(function (res) {
+      if (res.ok) {
+        return res.json();
+      }
+    })
+    .then(function (values) {
+      let newResto = new resto(values, newMap.map);
 
-fetch("resto-listing.json") // remplacer path par url https à la fin du projet
-  .then(function(res) {
-    if (res.ok) {
-      return res.json();
-    }
-  })
-  .then(function(values) {
+      google.maps.event.addListener(newMap.map, "idle", function () {
+        for (i = 0; i < newResto.markers.length; i++) {
+          newResto.markers[i].setMap(null);
+        }
 
-      calculAverage(values)
-      showComment(values)
-      addMarkers(values);
-      restoInfoWindow(values);
-      addResto(values);
-  
-      google.maps.event.addListener(map,'idle', function() {
-        $(listing).html("");
-        $('#resto-count h4 span').html("");
-        showVisibleMarkers(values);
+        newResto.showTheRightRestos();
+        newResto.addPlaces();
       });
-
-      starsFilterSlider(values)
-      
-    
-      // google.maps.event.addListener(map,'idle', function() {
-      //   $(listing).html("");
-      //   addPlaces(values);
-      // });
     })
 
-  .catch(function(err) {
-    console.log("error : " + err + ' at line n° ' + err.lineNumber)
-  });
-})
+    .catch(function (err) {
+      console.log("error : " + err + " at line n° " + err.lineNumber);
+    });
+});

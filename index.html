@@ -24,8 +24,6 @@
 
 <!-- Jquery UI CSS -->
 	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
-
-
 	
 </head>
 
@@ -93,6 +91,11 @@
 
 <section class="page-section bg-primary text-white mb-0" id="restos">
 
+
+	<div id="resto-sum-up" class="container"> 
+
+	</div>
+
     <div id="map" class="container">
     </div>
 
@@ -109,7 +112,7 @@
 				<div id="slider-range"></div>
 			</div>
 			
-			<div id="resto-count"><h4>Il y a <span></span> restaurants dans la zone sélectionné</h4></div>
+			<div id="resto-count"><h4>Il y a <span></span> restaurants dans la zone sélectionnée</h4></div>
 			<div id="resto-listing"></div>
 
     	</div>
@@ -154,8 +157,9 @@
 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9hPFyow-eEse7HOUvLgSAv_GhxZ5l1og&callback=initMap&libraries=places,geometry&v=weekly" async></script>
 <!-- My JS -->
-<script src="js/functions.js"></script>
- <script src="js/map.js"></script>
+<script> function initMap(){} </script>
+<script src="js/classMap.js"></script>
+<script src="js/classResto.js"></script>
 <script src="js/app.js"></script>
 
 </body>

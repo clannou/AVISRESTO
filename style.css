@@ -153,13 +153,41 @@ footer {
   border: 3px solid #212529;
   background-color: white;
   color: black;
-  margin-left: 0;
+  margin: 0px 15px 0px 15px;
   width: 25%;
 }
 
-.listing-title {
-  color: #212529;
+#resto-sum-up {
+  border: 3px solid #212529;
+  background-color: #9adb9496;
+  margin: 0px 15px 0px 15px;
+  width: 25%;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+#addRestoContent {
+  padding: 10px;
+  font-family: "ShareTech-Regular";
+}
+
+#resto-listing {
+  overflow-y: scroll;
+  max-height: 600px;
+}
+
+#listing li {
+  list-style-type: none;
   text-align: center;
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#listing li:hover {
+  background-color: #212529;
+  color: white;
+  cursor: pointer;
 }
 
 #map {
@@ -198,11 +226,8 @@ footer {
   font-size: 1.5em;
 }
 
-#content,
-#addRestoContent {
+#content {
   color: rgb(0, 0, 0);
-  background-color: #9adb9496;
-  box-shadow: 10px 5px 5px #212529;
   padding: 10px;
   font-family: "ShareTech-Regular";
 }
@@ -211,9 +236,10 @@ footer {
   text-align: center;
   color: #2c3e50;
   font-weight: bold;
-  border: 5px solid #2c3e50;
+  border: 2px solid #2c3e50;
   margin-right: 50px;
   margin-left: 50px;
+  background-color: #ffffff;
 }
 
 #bodyContent {
@@ -256,8 +282,9 @@ footer {
 #add-comment-section {
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
-  width: 75%;
+  width: 100%;
   margin: auto;
   font-size: 20px;
   background-color: #2c3e50;
@@ -270,8 +297,7 @@ input,
 select,
 textarea {
   margin: 10px;
-  /* border-radius: 10% / 50%; */
-  /* width: 75%; */
+  width: 90%;
 }
 
 input::placeholder {
@@ -291,9 +317,15 @@ input::placeholder {
 }
 
 .gm-style .gm-style-iw-c {
-  /* background-color: #9adb9496; */
   border-radius: 0px;
   border: 3px solid green;
   padding: 0%;
   width: 150%;
+}
+
+#message-after-submit,
+#message-after-submit2 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 70%;
 }
