@@ -14,7 +14,6 @@ window.addEventListener("load", function (event) {
         for (i = 0; i < newResto.markers.length; i++) {
           newResto.markers[i].setMap(null);
         }
-
         newResto.showTheRightRestos();
         newResto.addPlaces();
       });

@@ -17,6 +17,13 @@ class resto {
 
     this.restoSumUp = document.getElementById("resto-sum-up");
 
+    this.newCommentSubmit;
+    this.newComment;
+    this.newStar;
+    this.newStarNumber;
+
+    this.contentStringAfterSubmit;
+
     this.markers = [];
     this.markerWhenCreatingResto = null;
 
@@ -25,8 +32,12 @@ class resto {
     this.restoPosition();
     this.restosListCreation(restos);
     this.createMarker();
-    this.showTheRightRestos();
-    this.showRestoSumUp();
+
+    google.maps.event.addListener(this.map, "tilesloaded ", function () {
+      this.showTheRightRestos();
+    });
+
+    this.createRestoSumUp();
     this.addResto();
     this.addPlaces();
   }
@@ -144,6 +155,10 @@ class resto {
       });
       resto.marker = marker;
       this.markers.push(marker);
+
+      resto.marker.addListener("click", () => {
+        this.restoSumUpForm(resto);
+      });
     });
   }
 
@@ -151,15 +166,14 @@ class resto {
     this.restoDescription = `<p>Nom du resto : ${resto.restaurantName}<br>Adresse du resto : ${resto.address}<br>Note du resto : ${resto.ratingsAverage}</p>`;
     this.restoDivListing = document.createElement("li");
     this.restoDivListing.innerHTML = this.restoDescription;
-    this.listing.appendChild(this.restoDivListing);
+    resto.divListing = this.listing.appendChild(this.restoDivListing);
 
-    this.restoDivListing.addEventListener("click", (map) => {
-      this.map.setCenter(resto.position);
-      $(this.restoSumUp).html(resto.contentString);
+    resto.divListing.addEventListener("click", () => {
+      this.restoSumUpForm(resto);
     });
   }
 
-  showRestoSumUp() {
+  createRestoSumUp() {
     this.restos.forEach((resto) => {
       let streetViewImagesrc =
         "https://maps.googleapis.com/maps/api/streetview?location=" +
@@ -177,7 +191,7 @@ class resto {
       <form action="" method="get">
         <div><textarea id="add-comment-input" placeholder=" Indiquez votre commentaire" name="add-comment-input" required rows="4" cols="40"></textarea></div>
         <div>
-        <select id="new-star"name="pets" id="pet-select" required>
+        <select id="new-star" name="stars" required>
           <option value="">--Choisissez une note--</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -196,39 +210,46 @@ class resto {
       let contentStringAfterSubmit = `
       <div id="message-after-submit">Merci pour votre commentaire, il est à présent rajouté aux notes du resto !</div>`;
 
-      resto.marker.addListener("click", () => {
-        $(this.restoSumUp).html(resto.contentString);
+      this.contentStringAfterSubmit = contentStringAfterSubmit;
+    });
+  }
 
-        if (this.markerWhenCreatingResto !== null) {
-          this.markerWhenCreatingResto.setMap(null);
-        }
+  restoSumUpForm(resto) {
+    this.map.setCenter(resto.position);
+    $(this.restoSumUp).html(resto.contentString);
 
-        let newCommentSubmit = document.getElementById("rating-button");
+    if (this.markerWhenCreatingResto !== null) {
+      this.markerWhenCreatingResto.setMap(null);
+    }
 
-        newCommentSubmit.addEventListener("click", (e) => {
-          let newComment = document.getElementById("add-comment-input").value;
-          let newStar = document.getElementById("new-star").value;
-          let newStarNumber = Number(newStar);
+    this.newCommentSubmit = document.getElementById("rating-button");
 
-          /* VERIFICATION SI ENVOI DE NEWRATING SANS VALEUR */
-          if (newComment == null || newComment == "" || newStar == "") {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-          } else {
-            let newRating = {
-              stars: newStarNumber,
-              comment: newComment,
-            };
+    this.newCommentSubmit.addEventListener("click", (e) => {
+      this.newComment = document.getElementById("add-comment-input").value;
+      this.newStar = document.getElementById("new-star").value;
+      this.newStarNumber = Number(this.newStar);
 
-            resto.ratings.push(newRating);
-            this.calculAverageAndJoinComments();
-            this.showTheRightRestos();
-            this.showRestoSumUp();
-            $(this.restoSumUp).html(contentStringAfterSubmit);
-          }
-        });
-      });
+      /* VERIFICATION SI ENVOI DE NEWRATING SANS VALEUR */
+      if (
+        this.newComment == null ||
+        this.newComment == "" ||
+        this.newStar == ""
+      ) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      } else {
+        let newRating = {
+          stars: this.newStarNumber,
+          comment: this.newComment,
+        };
+
+        resto.ratings.push(newRating);
+        this.calculAverageAndJoinComments();
+        this.showTheRightRestos();
+        this.createRestoSumUp();
+        $(this.restoSumUp).html(this.contentStringAfterSubmit);
+      }
     });
   }
 
@@ -313,6 +334,8 @@ class resto {
             ],
           };
 
+          console.log(newResto);
+
           this.markerWhenCreatingResto.setMap(null);
 
           this.restosList.push(newResto);
@@ -321,7 +344,7 @@ class resto {
           this.restoPosition();
           this.createMarker();
           this.showTheRightRestos();
-          this.showRestoSumUp();
+          this.createRestoSumUp();
           $(this.restoSumUp).html(contentStringAfterSubmit2);
         }
       });
@@ -370,7 +393,7 @@ class resto {
       this.restoPosition();
       this.createMarker();
       this.showTheRightRestos();
-      this.showRestoSumUp();
+      this.createRestoSumUp();
     }
   }
 }
